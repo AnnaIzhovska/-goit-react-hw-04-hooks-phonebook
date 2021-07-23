@@ -2,15 +2,15 @@ import PropTypes from "prop-types";
 import { Contact, ContactItem, BtnDelete, Text } from './Contacts.styles';
 import {RiDeleteBin5Line, RiUserHeartLine} from 'react-icons/ri';
 
-const ContactList = ({contacts, onDeleteContact}) => (
-        <Contact>
-          {contacts.map(({id,name,number}) => (
-            <ContactItem key={id}><RiUserHeartLine/>
-            <Text>{name}: {number}</Text>
-            <BtnDelete onClick = {() => onDeleteContact(id)}><RiDeleteBin5Line/></BtnDelete>
-            </ContactItem>
-          ))}
-        </Contact>
+const ContactList = ({ contacts, onDeleteContact }) => (
+  <Contact>
+    {contacts.map(({ id, name, number }) => (
+      <ContactItem key={id}><RiUserHeartLine />
+        <Text>{name}: {number}</Text>
+        <BtnDelete onClick={() => onDeleteContact(id)}><RiDeleteBin5Line /></BtnDelete>
+      </ContactItem>
+    ))}
+  </Contact>
   )
 
 ContactList.propTypes = {

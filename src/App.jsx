@@ -67,7 +67,6 @@ const [contacts, setContacts] = useState(() => {
       <ContactForm onSubmit={formSubmitHandle}></ContactForm>
       <h2> <RiContactsLine /> Contacts</h2>
       <Filter value={filter} onChange={changeFilter}></Filter>
-
       {contacts.length > 0 && (
          <ContactList contacts={getVisibleContacts()} onDeleteContact={deleteContact}></ContactList>
       )}
